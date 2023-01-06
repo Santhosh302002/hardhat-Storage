@@ -22,8 +22,10 @@ contract simpleStorage{
     function storeInformation(string memory Name,uint256 REG_NO) public {
       people.push(information(Name,REG_NO));
     }
-    function reteiveInfo(uint256 INDEX) public view returns(string memory,uint256){
-       return (people[INDEX].name, 
-       (people[INDEX].regNo));
+    function reteiveInfoName(uint256 INDEX) public view returns(string memory){
+       return (people[INDEX].name);
+    }
+    function reteiveInfoReg(uint256 INDEX) public view returns(uint256){
+       return (people[INDEX].regNo);
     }
 }
